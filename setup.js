@@ -75,7 +75,7 @@ const ask = () => {
     )
     const answers = await inquirer.prompt(questions(defaultRegion, regions))
     var doc = YAML.safeLoad(fs.readFileSync('serverless.yml', 'utf8'))
-    doc.service = answer.service
+    doc.service = answers.service
     doc.custom.pythonRequirements.dockerizePip = answers.docker
     doc.provider.runtime = answers.python
     doc.provider.region = answers.region
