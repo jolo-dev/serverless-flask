@@ -5,11 +5,12 @@ The fastest way to a Flask application with [Serverless](https://github.com/serv
 ## Usage
 
 ```
-$ npm install -g serverless
-$ serverless install --url https://github.com/alexdebrie/serverless-flask --name my-flask-app
+# Now per default (node >= 10.*), **npx** is pre-installed which makes the next line optional
+$ npm install -g serverless # Optional
+$ (npx) serverless install --url https://github.com/jolo-dev/serverless-flask --name my-flask-app
 $ cd my-flask-app && npm run setup
 <answer prompts>
-$ serverless deploy
+$ (npx) serverless deploy
 ```
 
 Once the deploy is complete, run `sls info` to get the endpoint:

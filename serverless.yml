@@ -1,27 +1,22 @@
 service: serverless-flask
-
 plugins:
   - serverless-python-requirements
   - serverless-wsgi
-
 custom:
   wsgi:
     app: app.app
     packRequirements: false
   pythonRequirements:
-    dockerizePip: true
-
+    dockerizePip: false
 package:
   exclude:
     - node_modules/**
     - venv/**
-
 provider:
   name: aws
-  runtime: python2.7
+  runtime: python3.8
   stage: dev
-  region: us-east-1
-
+  region: eu-central-1
 functions:
   app:
     handler: wsgi.handler

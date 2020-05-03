@@ -1,0 +1,11 @@
+{
+  "python.pythonPath": "./venv/bin/python3.8",
+  "python.formatting.provider": "autopep8",
+  "python.linting.lintOnSave": true,
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "editor.formatOnSave": true,
+  "[python]": {
+    "editor.tabSize": 4
+  }
+}

@@ -103,3 +103,6 @@ ENV/
 # serverless
 .serverless/
 .requirements/
+
+# node
+node_modules
