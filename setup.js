@@ -16,8 +16,8 @@ const questions = (defaultRegion, regions) => {
   return [
     {
       type: 'input',
-      name: 'serviceName',
-      message: 'Your Service name',
+      name: 'service',
+      message: 'Your Service Name',
       default: 'serverless-flask'
     },
     {
@@ -75,6 +75,7 @@ const ask = () => {
     )
     const answers = await inquirer.prompt(questions(defaultRegion, regions))
     var doc = YAML.safeLoad(fs.readFileSync('serverless.yml', 'utf8'))
+    doc.service = answer.service
     doc.custom.pythonRequirements.dockerizePip = answers.docker
     doc.provider.runtime = answers.python
     doc.provider.region = answers.region
