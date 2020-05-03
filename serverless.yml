@@ -8,7 +8,6 @@ custom:
     packRequirements: false
   pythonRequirements:
     dockerizePip: false
-    slim: true
 package:
   exclude:
     - node_modules/**
