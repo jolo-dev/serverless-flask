@@ -16,5 +16,8 @@
     "js-yaml": "^3.9.1",
     "serverless-python-requirements": "^2.5.0",
     "serverless-wsgi": "^1.7.4"
+  },
+  "dependencies": {
+    "serverless": "^1.71.3"
   }
 }

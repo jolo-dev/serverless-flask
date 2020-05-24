@@ -12,6 +12,9 @@ package:
   exclude:
     - node_modules/**
     - venv/**
+    - package.json
+    - package-lock.json
+    - setup.js
 provider:
   name: aws
   runtime: python3.8
