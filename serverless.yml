@@ -1,13 +1,16 @@
-service: serverless-flask
 plugins:
   - serverless-python-requirements
   - serverless-wsgi
+service: serverless-flask
 custom:
   wsgi:
     app: app.app
     packRequirements: false
+    pythonBin: venv/bin/python
   pythonRequirements:
     dockerizePip: false
+    zip: true
+    slim: true
 package:
   exclude:
     - node_modules/**
@@ -22,7 +25,7 @@ provider:
   region: eu-central-1
 functions:
   app:
-    handler: wsgi.handler
+    handler: wsgi_handler.handler
     events:
       - http: ANY /
-      - http: 'ANY {proxy+}'
+      - http: ANY {proxy+}
